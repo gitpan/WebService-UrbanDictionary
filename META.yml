@@ -1,0 +1,28 @@
+---
+abstract: "An interface to UrbanDictionary.com's JSON API"
+author:
+  - 'William Woodruff <william@tuffbizz.com>'
+build_requires:
+  Test: '0'
+  Test::More: '0'
+configure_requires:
+  ExtUtils::MakeMaker: '6.30'
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 5.019, CPAN::Meta::Converter version 2.141520'
+license: mit
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: '1.4'
+name: WebService-UrbanDictionary
+requires:
+  Exporter: '0'
+  JSON: '0'
+  LWP::Simple: '0'
+  strict: '0'
+  vars: '0'
+  warnings: '0'
+resources:
+  bugtracker: https://github.com/woodruffw/WebService-UrbanDictionary/issues
+  homepage: https://github.com/woodruffw/WebService-UrbanDictionary
+  repository: https://github.com/woodruffw/WebService-UrbanDictionary.git
+version: '1.000'
