@@ -14,7 +14,7 @@ use LWP::Simple;
 use JSON qw(decode_json);
 use vars qw($VERSION @ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
 
-$VERSION = 1.00;
+$VERSION = 1.001;
 @ISA = qw(Exporter);
 @EXPORT = qw(new define author permalink thumbs_up thumbs_down tags);
 @EXPORT_OK = qw(new define author permalink thumbs_up thumbs_down tags);
@@ -74,7 +74,7 @@ WebService::UrbanDictionary - An interface to UrbanDictionary.com's JSON API
 
 =head1 VERSION
 
-version 1.000
+version 1.001
 
 =head1 SYNOPSIS
 
@@ -82,8 +82,9 @@ C<use WebService::UrbanDictionary;>
 
 C<< my $ud = WebService::UrbanDictionary->new(word => 'perl'); >>
 
-C<my $definition = define();>
-C<my $second_def = define(1);> 
+C<< my $definition = $ud->define(); >>
+
+C<< my $second_def = $ud->define(1); >> 
 
 =head1 DESCRIPTION
 

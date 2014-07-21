@@ -4,7 +4,7 @@ WebService::UrbanDictionary - An interface to UrbanDictionary.com's JSON API
 
 # VERSION
 
-version 1.000
+version 1.001
 
 # SYNOPSIS
 
@@ -12,8 +12,9 @@ version 1.000
 
 `my $ud = WebService::UrbanDictionary->new(word => 'perl');`
 
-`my $definition = define();`
-`my $second_def = define(1);` 
+`my $definition = $ud->define();`
+
+`my $second_def = $ud->define(1);` 
 
 # DESCRIPTION
 
