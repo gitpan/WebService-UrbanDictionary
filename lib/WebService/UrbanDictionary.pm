@@ -14,7 +14,7 @@ use LWP::Simple;
 use JSON qw(decode_json);
 use vars qw($VERSION @ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
 
-$VERSION = 1.001;
+$VERSION = 1.002;
 @ISA = qw(Exporter);
 @EXPORT = qw(new define author permalink thumbs_up thumbs_down tags);
 @EXPORT_OK = qw(new define author permalink thumbs_up thumbs_down tags);
@@ -74,7 +74,7 @@ WebService::UrbanDictionary - An interface to UrbanDictionary.com's JSON API
 
 =head1 VERSION
 
-version 1.001
+version 1.002
 
 =head1 SYNOPSIS
 
@@ -88,7 +88,7 @@ C<< my $second_def = $ud->define(1); >>
 
 =head1 DESCRIPTION
 
-WWW::Query::UrbanDictionary provides a set of simple methods for accessing definitions
+WebService::UrbanDictionary provides a set of simple methods for accessing definitions
 and other data available through UrbanDictionary's online JSON API.
 
 =head2 Methods

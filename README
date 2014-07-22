@@ -3,7 +3,7 @@ NAME
     API
 
 VERSION
-    version 1.001
+    version 1.002
 
 SYNOPSIS
     "use WebService::UrbanDictionary;"
@@ -15,7 +15,7 @@ SYNOPSIS
     "my $second_def = $ud->define(1);"
 
 DESCRIPTION
-    WWW::Query::UrbanDictionary provides a set of simple methods for
+    WebService::UrbanDictionary provides a set of simple methods for
     accessing definitions and other data available through UrbanDictionary's
     online JSON API.
 

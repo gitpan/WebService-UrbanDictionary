@@ -4,7 +4,7 @@ WebService::UrbanDictionary - An interface to UrbanDictionary.com's JSON API
 
 # VERSION
 
-version 1.001
+version 1.002
 
 # SYNOPSIS
 
@@ -18,7 +18,7 @@ version 1.001
 
 # DESCRIPTION
 
-WWW::Query::UrbanDictionary provides a set of simple methods for accessing definitions
+WebService::UrbanDictionary provides a set of simple methods for accessing definitions
 and other data available through UrbanDictionary's online JSON API.
 
 ## Methods
