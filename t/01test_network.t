@@ -1,8 +1,6 @@
 use Test::More;
-BEGIN { plan tests => 2 }
+BEGIN { plan tests => 1 }
 use LWP::Simple;
-
-ok(1);
 
 diag "\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n";
 diag "!                                                                          !\n";

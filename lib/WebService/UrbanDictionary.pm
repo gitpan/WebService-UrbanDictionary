@@ -10,56 +10,72 @@ use strict;
 use warnings;
 
 use Exporter;
+use Carp;
 use LWP::Simple;
 use JSON qw(decode_json);
-use vars qw($VERSION @ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
+use vars qw($VERSION @ISA @EXPORT @EXPORT_OK);
 
-$VERSION = 1.002;
+$VERSION = 1.003;
 @ISA = qw(Exporter);
-@EXPORT = qw(new define author permalink thumbs_up thumbs_down tags);
-@EXPORT_OK = qw(new define author permalink thumbs_up thumbs_down tags);
+@EXPORT = qw(define_word defid author permalink thumbs_up thumbs_down tags result_type);
+@EXPORT_OK = qw(define_word defid author permalink thumbs_up thumbs_down tags result_type);
 
-our @definitions = undef;
-our @tags = undef;
-our $urban_url = "http://api.urbandictionary.com/v0/define?term=";
+my $urban_url = "http://api.urbandictionary.com/v0/define?term=";
 
-sub new {
-	my ($class, %args) = @_;
-	my $word = $args{word} or die "No word provided.";
-	my $response = decode_json(get($urban_url . $word)) or die "Error during fetch/decode.";
-	my $self = bless({}, $class);
-	@definitions = @{$response->{list}};
-	@tags = @{$response->{tags}};
-	return $self;
+sub define_word {
+	my $word = shift or carp "No word provided.";
+	my $i = shift || 0;
+	my $response = decode_json(get($urban_url . $word)) or carp "Error during fetch/decode.";
+	return $response->{list}[$i]->{definition};
 }
 
-sub define {
-	my $index = shift || 0;
-	return $definitions[$index]->{definition};
+sub defid {
+	my $word = shift or carp "No word provided.";
+	my $i = shift || 0;
+	my $response = decode_json(get($urban_url . $word)) or carp "Error during fetch/decode.";
+	return $response->{list}[$i]->{defid};
 }
 
 sub author {
-	my $index = shift || 0;
-	return $definitions[$index]->{author};
+	my $word = shift or carp "No word provided.";
+	my $i = shift || 0;
+	my $response = decode_json(get($urban_url . $word)) or carp "Error during fetch/decode.";
+	return $response->{list}[$i]->{author};
 }
 
 sub permalink {
-	my $index = shift || 0;
-	return $definitions[$index]->{permalink};
+	my $word = shift or carp "No word provided.";
+	my $i = shift || 0;
+	my $response = decode_json(get($urban_url . $word)) or carp "Error during fetch/decode.";
+	return $response->{list}[$i]->{permalink};
 }
 
 sub thumbs_up {
-	my $index = shift || 0;
-	return $definitions[$index]->{thumbs_up};
+	my $word = shift or carp "No word provided.";
+	my $i = shift || 0;
+	my $response = decode_json(get($urban_url . $word)) or carp "Error during fetch/decode.";
+	return $response->{list}[$i]->{thumbs_up};
 }
 
 sub thumbs_down {
-	my $index = shift || 0;
-	return $definitions[$index]->{thumbs_down};
+	my $word = shift or carp "No word provided.";
+	my $i = shift || 0;
+	my $response = decode_json(get($urban_url . $word)) or carp "Error during fetch/decode.";
+	return $response->{list}[$i]->{thumbs_down};
 }
 
 sub tags {
-	return @tags;
+	my $word = shift or carp "No word provided.";
+	my $i = shift || 0;
+	my $response = decode_json(get($urban_url . $word)) or carp "Error during fetch/decode.";
+	return $response->{tags};
+}
+
+sub result_type {
+	my $word = shift or carp "No word provided.";
+	my $i = shift || 0;
+	my $response = decode_json(get($urban_url . $word)) or carp "Error during fetch/decode.";
+	return $response->{result_type};
 }
 
 1;
@@ -74,59 +90,62 @@ WebService::UrbanDictionary - An interface to UrbanDictionary.com's JSON API
 
 =head1 VERSION
 
-version 1.002
+version 1.003
 
 =head1 SYNOPSIS
 
 C<use WebService::UrbanDictionary;>
 
-C<< my $ud = WebService::UrbanDictionary->new(word => 'perl'); >>
+C<< my $definition = define_word('perl'); >>
 
-C<< my $definition = $ud->define(); >>
-
-C<< my $second_def = $ud->define(1); >> 
+C<< my $second_def = define_word('perl', 1); >> 
 
 =head1 DESCRIPTION
 
-WebService::UrbanDictionary provides a set of simple methods for accessing definitions
+WebService::UrbanDictionary provides a set of procedural methods for accessing definitions
 and other data available through UrbanDictionary's online JSON API.
 
 =head2 Methods
 
 =over 12
 
-=item C<< new(word => $word) >>
+=item C<< define_word(word, index) >>
 
-Instantiates a new WebService::UrbanDictionary object with the given word.
+Returns the definition for the given word at the given index.
+If no index is provided, the first definition is assumed (index 0).
 
-=item C<< define(index) >>
+=item C<< defid(word, index) >>
 
-Returns the definition for the current word at the given index.
-If no index is given, the first definition is given (index 0).
+Returns the definition id for the given word at the given index.
+If no index is provided, the first definition's defid is assumed (index 0).
 
-=item C<< author(index) >>
+=item C<< author(word, index) >>
 
 Returns the author of the word's definition at the given index.
-If no index is given, the first definition is given (index 0).
+If no index is provided, the first definition's author is assumed (index 0).
 
-=item C<< permalink(index) >>
+=item C<< permalink(word, index) >>
 
 Returns a permalink to the word's definition at the given index.
-If no index is given, the first definition is given (index 0).
+If no index is provided, the first definition's permalink is assumed (index 0).
 
-=item C<< thumbs_up(index) >>
+=item C<< thumbs_up(word, index) >>
 
 Returns the number of 'thumbs up's given to the word's definition at the given index.
-If no index is given, the first definition is given (index 0).
+If no index is provided, the first definition's thumbs up is assumed (index 0).
 
-=item C<< thumbs_down(index) >>
+=item C<< thumbs_down(word, index) >>
 
 Returns the number of 'thumbs down's given to the word's definition at the given index.
-If no index is given, the first definition is given (index 0).
+If no index is provided, the first definition's thumbs down is assumed (index 0).
 
-=item C<< tags() >>
+=item C<< tags(word) >>
 
 Returns an array of tags associated with the given word.
+
+=item C<< result_type(word) >>
+
+Returns the result type. 
 
 =back
 

@@ -4,57 +4,60 @@ WebService::UrbanDictionary - An interface to UrbanDictionary.com's JSON API
 
 # VERSION
 
-version 1.002
+version 1.003
 
 # SYNOPSIS
 
 `use WebService::UrbanDictionary;`
 
-`my $ud = WebService::UrbanDictionary->new(word => 'perl');`
+`my $definition = define_word('perl');`
 
-`my $definition = $ud->define();`
-
-`my $second_def = $ud->define(1);` 
+`my $second_def = define_word('perl', 1);` 
 
 # DESCRIPTION
 
-WebService::UrbanDictionary provides a set of simple methods for accessing definitions
+WebService::UrbanDictionary provides a set of procedural methods for accessing definitions
 and other data available through UrbanDictionary's online JSON API.
 
 ## Methods
 
-- `new(word => $word)`
+- `define_word(word, index)`
 
-    Instantiates a new WebService::UrbanDictionary object with the given word.
+    Returns the definition for the given word at the given index.
+    If no index is provided, the first definition is assumed (index 0).
 
-- `define(index)`
+- `defid(word, index)`
 
-    Returns the definition for the current word at the given index.
-    If no index is given, the first definition is given (index 0).
+    Returns the definition id for the given word at the given index.
+    If no index is provided, the first definition's defid is assumed (index 0).
 
-- `author(index)`
+- `author(word, index)`
 
     Returns the author of the word's definition at the given index.
-    If no index is given, the first definition is given (index 0).
+    If no index is provided, the first definition's author is assumed (index 0).
 
-- `permalink(index)`
+- `permalink(word, index)`
 
     Returns a permalink to the word's definition at the given index.
-    If no index is given, the first definition is given (index 0).
+    If no index is provided, the first definition's permalink is assumed (index 0).
 
-- `thumbs_up(index)`
+- `thumbs_up(word, index)`
 
     Returns the number of 'thumbs up's given to the word's definition at the given index.
-    If no index is given, the first definition is given (index 0).
+    If no index is provided, the first definition's thumbs up is assumed (index 0).
 
-- `thumbs_down(index)`
+- `thumbs_down(word, index)`
 
     Returns the number of 'thumbs down's given to the word's definition at the given index.
-    If no index is given, the first definition is given (index 0).
+    If no index is provided, the first definition's thumbs down is assumed (index 0).
 
-- `tags()`
+- `tags(word)`
 
     Returns an array of tags associated with the given word.
+
+- `result_type(word)`
+
+    Returns the result type. 
 
 # SEE ALSO
 

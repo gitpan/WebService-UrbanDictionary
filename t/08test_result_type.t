@@ -2,6 +2,6 @@ use Test;
 BEGIN { plan tests => 1 }
 use WebService::UrbanDictionary;
 
-my $link = permalink('perl');
+my $type = result_type('perl');
 
-ok($link =~ m/http:\/\//);
+ok($type =~ m/exact/);

@@ -1,11 +1,7 @@
 use Test;
-BEGIN { plan tests => 2 }
+BEGIN { plan tests => 1 }
 use WebService::UrbanDictionary;
 
-ok(1);
-
-my $ud = WebService::UrbanDictionary->new(word => 'perl');
-
-my $def = define();
+my $def = define_word('perl', 0);
 
 ok($def =~ m/pur'-el/);
