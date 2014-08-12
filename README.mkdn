@@ -4,7 +4,7 @@ WebService::UrbanDictionary - An OO interface to UrbanDictionary.com's JSON API.
 
 # VERSION
 
-version 2.000
+version 2.002
 
 # SYNOPSIS
 
@@ -36,6 +36,10 @@ WebService::UrbanDictionary provides an object-oriented to UrbanDictionary's onl
 # AUTHOR
 
 William Woodruff <william@tuffbizz.com>
+
+# CONTRIBUTOR
+
+Gabriel Vieira <gabriel.vieira@gmail.com>
 
 # COPYRIGHT AND LICENSE
 

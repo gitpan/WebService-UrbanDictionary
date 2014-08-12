@@ -35,7 +35,7 @@ WebService::UrbanDictionary::Term - The Term object filled by WebService::UrbanD
 
 =head1 VERSION
 
-version 2.000
+version 2.002
 
 =head1 SYNOPSIS
 
@@ -55,15 +55,14 @@ WebService::UrbanDictionary provides an object-oriented to UrbanDictionary's onl
 
 =over 12
 
-=item C<< BUILD(res) >>
-
-Called by C<< request() >> in L<WebService::UrbanDictionary>. Do not use externally.
-
 =item C<< definition >>
 
 Returns either an array of hashes containing API data, or the first definition of the word depending on context.
+These elements can then be accessed with the methods in L<WebService::UrbanDictionary::Term::Definition>.
 
 =back
+
+=for Pod::Coverage BUILD
 
 =head1 SEE ALSO
 

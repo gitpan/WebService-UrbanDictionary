@@ -3,7 +3,7 @@ NAME
     JSON API.
 
 VERSION
-    version 2.000
+    version 2.002
 
 SYNOPSIS
             use WebService::UrbanDictionary;
@@ -30,6 +30,9 @@ SEE ALSO
 
 AUTHOR
     William Woodruff <william@tuffbizz.com>
+
+CONTRIBUTOR
+    Gabriel Vieira <gabriel.vieira@gmail.com>
 
 COPYRIGHT AND LICENSE
     This software is Copyright (c) 2014 by William Woodruff.
