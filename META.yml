@@ -1,9 +1,9 @@
 ---
-abstract: "An interface to UrbanDictionary.com's JSON API"
+abstract: "An OO interface to UrbanDictionary.com's JSON API."
 author:
   - 'William Woodruff <william@tuffbizz.com>'
 build_requires:
-  Test: '0'
+  LWP::Simple: '0'
   Test::More: '0'
 configure_requires:
   ExtUtils::MakeMaker: '0'
@@ -16,14 +16,14 @@ meta-spec:
 name: WebService-UrbanDictionary
 requires:
   Carp: '0'
-  Exporter: '0'
   JSON: '0'
-  LWP::Simple: '0'
+  LWP::UserAgent: '0'
+  Moo: '0'
+  perl: '5.006'
   strict: '0'
-  vars: '0'
   warnings: '0'
 resources:
-  bugtracker: https://github.com/woodruffw/WebService-UrbanDictionary/issues
-  homepage: https://github.com/woodruffw/WebService-UrbanDictionary
-  repository: https://github.com/woodruffw/WebService-UrbanDictionary.git
-version: '1.003'
+  bugtracker: http://github.com/gabrielmad/${dist}/issues
+  homepage: http://metacpan.org/release/${dist}
+  repository: git://github.com/gabrielmad/${dist}
+version: '2.000'

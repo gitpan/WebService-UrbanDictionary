@@ -1,62 +1,32 @@
 NAME
-    WebService::UrbanDictionary - An interface to UrbanDictionary.com's JSON
-    API
+    WebService::UrbanDictionary - An OO interface to UrbanDictionary.com's
+    JSON API.
 
 VERSION
-    version 1.003
+    version 2.000
 
 SYNOPSIS
-    "use WebService::UrbanDictionary;"
+            use WebService::UrbanDictionary;
 
-    "my $definition = define_word('perl');"
+            my $ud = WebService::UrbanDictionary->new;
 
-    "my $second_def = define_word('perl', 1);"
+            my $results = request('perl'); 
+
+            for my $each (@{ $results->definitions }) {
+                    printf "Definition: %s\n(by %s)\n\n", $each->definition, $each->author;
+            }
 
 DESCRIPTION
-    WebService::UrbanDictionary provides a set of procedural methods for
-    accessing definitions and other data available through UrbanDictionary's
-    online JSON API.
+    WebService::UrbanDictionary provides an object-oriented to
+    UrbanDictionary's online JSON API.
 
   Methods
-    "define_word(word, index)"
-                Returns the definition for the given word at the given
-                index. If no index is provided, the first definition is
-                assumed (index 0).
-
-    "defid(word, index)"
-                Returns the definition id for the given word at the given
-                index. If no index is provided, the first definition's defid
-                is assumed (index 0).
-
-    "author(word, index)"
-                Returns the author of the word's definition at the given
-                index. If no index is provided, the first definition's
-                author is assumed (index 0).
-
-    "permalink(word, index)"
-                Returns a permalink to the word's definition at the given
-                index. If no index is provided, the first definition's
-                permalink is assumed (index 0).
-
-    "thumbs_up(word, index)"
-                Returns the number of 'thumbs up's given to the word's
-                definition at the given index. If no index is provided, the
-                first definition's thumbs up is assumed (index 0).
-
-    "thumbs_down(word, index)"
-                Returns the number of 'thumbs down's given to the word's
-                definition at the given index. If no index is provided, the
-                first definition's thumbs down is assumed (index 0).
-
-    "tags(word)"
-                Returns an array of tags associated with the given word.
-
-    "result_type(word)"
-                Returns the result type.
+    "request(word)"
+                Requests data on the given word from UrbanDictionary's API.
+                Returns a WebService::UrbanDictionary::Term object.
 
 SEE ALSO
-    <http://search.cpan.org/~sock/WWW-Search-UrbanDictionary-0.4/lib/WWW/Sea
-    rch/UrbanDictionary.pm>
+    WWW::Search::UrbanDictionary
 
 AUTHOR
     William Woodruff <william@tuffbizz.com>

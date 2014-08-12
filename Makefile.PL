@@ -3,14 +3,14 @@
 use strict;
 use warnings;
 
-
+use 5.006;
 
 use ExtUtils::MakeMaker ;
 
 
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "An interface to UrbanDictionary.com's JSON API",
+  "ABSTRACT" => "An OO interface to UrbanDictionary.com's JSON API.",
   "AUTHOR" => "William Woodruff <william\@tuffbizz.com>",
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0
@@ -21,18 +21,17 @@ my %WriteMakefileArgs = (
   "NAME" => "WebService::UrbanDictionary",
   "PREREQ_PM" => {
     "Carp" => 0,
-    "Exporter" => 0,
     "JSON" => 0,
-    "LWP::Simple" => 0,
+    "LWP::UserAgent" => 0,
+    "Moo" => 0,
     "strict" => 0,
-    "vars" => 0,
     "warnings" => 0
   },
   "TEST_REQUIRES" => {
-    "Test" => 0,
+    "LWP::Simple" => 0,
     "Test::More" => 0
   },
-  "VERSION" => "1.003",
+  "VERSION" => "2.000",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -41,13 +40,12 @@ my %WriteMakefileArgs = (
 
 my %FallbackPrereqs = (
   "Carp" => 0,
-  "Exporter" => 0,
   "JSON" => 0,
   "LWP::Simple" => 0,
-  "Test" => 0,
+  "LWP::UserAgent" => 0,
+  "Moo" => 0,
   "Test::More" => 0,
   "strict" => 0,
-  "vars" => 0,
   "warnings" => 0
 );
 
