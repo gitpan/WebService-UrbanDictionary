@@ -1,5 +1,5 @@
 use Test::More;
-BEGIN { plan tests => 2 }
+BEGIN { plan tests => 3 }
 use WebService::UrbanDictionary;
 
 my $ud = WebService::UrbanDictionary->new;
@@ -10,4 +10,4 @@ my $data = $ud->request("perl");
 
 ok(defined $data);
 
-#ok($data->definition =~ m/pur'-el/);
+ok($data->definition =~ m/pur'-el/);

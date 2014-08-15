@@ -31,7 +31,7 @@ my %WriteMakefileArgs = (
     "LWP::Simple" => 0,
     "Test::More" => 0
   },
-  "VERSION" => "2.002",
+  "VERSION" => "2.010",
   "test" => {
     "TESTS" => "t/*.t"
   }

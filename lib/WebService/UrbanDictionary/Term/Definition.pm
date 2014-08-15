@@ -26,7 +26,7 @@ WebService::UrbanDictionary::Term::Definition - Functions for retrieving data fr
 
 =head1 VERSION
 
-version 2.002
+version 2.010
 
 =head1 SYNOPSIS
 

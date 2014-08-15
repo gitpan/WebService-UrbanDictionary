@@ -13,8 +13,9 @@ has 'sounds'      => ( is => 'ro' );
 
 sub BUILD {
 	my $self = shift;
+	my $params = shift;
 	$self->{definitions} = [
-		map { WebService::UrbanDictionary::Term::Definition->new($_) } @{$self->{list}}
+		map { WebService::UrbanDictionary::Term::Definition->new($_) } @{$params->{list}}
 	];
 }
 
@@ -35,7 +36,7 @@ WebService::UrbanDictionary::Term - The Term object filled by WebService::UrbanD
 
 =head1 VERSION
 
-version 2.002
+version 2.010
 
 =head1 SYNOPSIS
 

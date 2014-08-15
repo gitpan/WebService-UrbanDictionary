@@ -4,7 +4,7 @@ WebService::UrbanDictionary - An OO interface to UrbanDictionary.com's JSON API.
 
 # VERSION
 
-version 2.002
+version 2.010
 
 # SYNOPSIS
 
