@@ -3,7 +3,7 @@ NAME
     JSON API.
 
 VERSION
-    version 2.010
+    version 2.011
 
 SYNOPSIS
             use WebService::UrbanDictionary;
@@ -26,7 +26,11 @@ DESCRIPTION
                 Returns a WebService::UrbanDictionary::Term object.
 
 SEE ALSO
-    WWW::Search::UrbanDictionary
+    WebService::UrbanDictionary::Term
+    WebService::UrbanDictionary::Term::Definition
+
+    WWW::Search::UrbanDictionary - Module for accessing UrbanDictionary's
+    (deprecated) SOAP API.
 
 AUTHOR
     William Woodruff <william@tuffbizz.com>

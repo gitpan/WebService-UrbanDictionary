@@ -1,6 +1,6 @@
 use Test::More;
 BEGIN { plan tests => 1 }
-use LWP::Simple;
+use LWP::UserAgent;
 
 diag "\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n";
 diag "!                                                                          !\n";
@@ -8,8 +8,8 @@ diag "! These tests WILL FAIL unless your computer is connected to the internet.
 diag "!                                                                          !\n";
 diag "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n";
 
-my $query = "http://google.com";
 my $browser = LWP::UserAgent->new;
-my $response = $browser->get( $query );
+my $response = $browser->get("http://www.google.com");
 
 ok($response->code == 200);
+

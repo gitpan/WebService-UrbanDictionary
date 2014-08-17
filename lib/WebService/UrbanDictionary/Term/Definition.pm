@@ -1,7 +1,5 @@
 package WebService::UrbanDictionary::Term::Definition;
 
-# ABSTRACT: Functions for retrieving data from WebService::UrbanDictionary::Term objects.
-
 use Moo;
 
 has 'defid'        => ( is => 'ro' );
@@ -22,11 +20,11 @@ __END__
 
 =head1 NAME
 
-WebService::UrbanDictionary::Term::Definition - Functions for retrieving data from WebService::UrbanDictionary::Term objects.
+WebService::UrbanDictionary::Term::Definition
 
 =head1 VERSION
 
-version 2.010
+version 2.011
 
 =head1 SYNOPSIS
 
@@ -42,7 +40,8 @@ version 2.010
 
 =head1 DESCRIPTION
 
-L<WebService::UrbanDictionary> provides an object-oriented to UrbanDictionary's online JSON API.
+WebService::UrbanDictionary::Term::Definition provides methods for accessing the data stored within 
+L<WebService::UrbanDictionary::Term> objects, which are in turn returned from a L<WebService::UrbanDictionary> object's C< request(word) > method.
 
 =head2 Methods
 
@@ -86,9 +85,14 @@ Returns the current vote for the definition, if it exists.
 
 =back
 
+=head1 NAME
+
+WebService::UrbanDictionary::Term::Definition - Wrapper for retreiving data from L<WebService::UrbanDictionary::Term> objects.
+
 =head1 SEE ALSO
 
-L<WWW::Search::UrbanDictionary>
+L<WebService::UrbanDictionary>
+L<WebService::UrbanDictionary::Term>
 
 =cut
 

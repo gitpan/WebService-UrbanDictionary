@@ -2,7 +2,7 @@ package WebService::UrbanDictionary;
 
 # ABSTRACT: An OO interface to UrbanDictionary.com's JSON API.
 
-our $VERSION = "2.010";
+our $VERSION = "2.011";
 
 use Carp;
 use strict;
@@ -37,7 +37,7 @@ WebService::UrbanDictionary - An OO interface to UrbanDictionary.com's JSON API.
 
 =head1 VERSION
 
-version 2.010
+version 2.011
 
 =head1 SYNOPSIS
 
@@ -68,7 +68,10 @@ Returns a L<WebService::UrbanDictionary::Term> object.
 
 =head1 SEE ALSO
 
-L<WWW::Search::UrbanDictionary>
+L<WebService::UrbanDictionary::Term>
+L<WebService::UrbanDictionary::Term::Definition>
+
+L<WWW::Search::UrbanDictionary> - Module for accessing UrbanDictionary's (deprecated) SOAP API.
 
 =head1 AUTHOR
 
