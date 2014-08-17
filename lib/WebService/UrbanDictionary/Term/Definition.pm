@@ -24,7 +24,7 @@ WebService::UrbanDictionary::Term::Definition
 
 =head1 VERSION
 
-version 2.011
+version 2.012
 
 =head1 SYNOPSIS
 
@@ -92,9 +92,8 @@ WebService::UrbanDictionary::Term::Definition - Wrapper for retreiving data from
 =head1 SEE ALSO
 
 L<WebService::UrbanDictionary>
-L<WebService::UrbanDictionary::Term>
 
-=cut
+L<WebService::UrbanDictionary::Term>
 
 =head1 AUTHOR
 

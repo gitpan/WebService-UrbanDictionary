@@ -4,7 +4,7 @@ WebService::UrbanDictionary - An OO interface to UrbanDictionary.com's JSON API.
 
 # VERSION
 
-version 2.011
+version 2.012
 
 # SYNOPSIS
 
@@ -32,6 +32,7 @@ WebService::UrbanDictionary provides an object-oriented to UrbanDictionary's onl
 # SEE ALSO
 
 [WebService::UrbanDictionary::Term](https://metacpan.org/pod/WebService::UrbanDictionary::Term)
+
 [WebService::UrbanDictionary::Term::Definition](https://metacpan.org/pod/WebService::UrbanDictionary::Term::Definition)
 
 [WWW::Search::UrbanDictionary](https://metacpan.org/pod/WWW::Search::UrbanDictionary) - Module for accessing UrbanDictionary's (deprecated) SOAP API.

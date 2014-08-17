@@ -36,7 +36,7 @@ WebService::UrbanDictionary::Term - The Term object filled by WebService::UrbanD
 
 =head1 VERSION
 
-version 2.011
+version 2.012
 
 =head1 SYNOPSIS
 
@@ -74,6 +74,7 @@ WebService::UrbanDictionary::Term - Object for holding definitions and other dat
 =head1 SEE ALSO
 
 L<WebService::UrbanDictionary>
+
 L<WebService::UrbanDictionary::Term::Definition>
 
 =head1 AUTHOR

@@ -25,6 +25,6 @@ resources:
   bugtracker: http://github.com/gabrielmad/${dist}/issues
   homepage: http://metacpan.org/release/${dist}
   repository: git://github.com/gabrielmad/${dist}
-version: '2.011'
+version: '2.012'
 x_contributors:
   - 'Gabriel Vieira <gabriel.vieira@gmail.com>'

@@ -3,7 +3,7 @@ NAME
     JSON API.
 
 VERSION
-    version 2.011
+    version 2.012
 
 SYNOPSIS
             use WebService::UrbanDictionary;
@@ -27,6 +27,7 @@ DESCRIPTION
 
 SEE ALSO
     WebService::UrbanDictionary::Term
+
     WebService::UrbanDictionary::Term::Definition
 
     WWW::Search::UrbanDictionary - Module for accessing UrbanDictionary's
