@@ -36,7 +36,7 @@ WebService::UrbanDictionary::Term - The Term object filled by WebService::UrbanD
 
 =head1 VERSION
 
-version 2.012
+version 2.013
 
 =head1 SYNOPSIS
 
@@ -66,6 +66,11 @@ These elements can then be accessed with the methods in L<WebService::UrbanDicti
 =back
 
 =for Pod::Coverage BUILD
+=for Pod::Coverage term
+=for Pod::Coverage tags
+=for Pod::Coverage result_type
+=for Pod::Coverage definitions
+=for Pod::Coverage sounds
 
 =head1 NAME
 
