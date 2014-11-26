@@ -24,9 +24,9 @@ requires:
   strict: 0
   warnings: 0
 resources:
-  bugtracker: http://github.com/woodruffw/${name}/issues
-  homepage: http://metacpan.org/release/${name}
-  repository: git://github.com/woodruffw/${name}
-version: 2.013
+  bugtracker: http://github.com/woodruffw/WebService-UrbanDictionary/issues
+  homepage: http://metacpan.org/release/WebService-UrbanDictionary
+  repository: git://github.com/woodruffw/WebService-UrbanDictionary
+version: 2.014
 x_contributors:
   - 'Gabriel Vieira <gabriel.vieira@gmail.com>'

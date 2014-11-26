@@ -24,7 +24,7 @@ WebService::UrbanDictionary::Term::Definition
 
 =head1 VERSION
 
-version 2.013
+version 2.014
 
 =head1 SYNOPSIS
 

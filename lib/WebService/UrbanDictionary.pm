@@ -2,7 +2,7 @@ package WebService::UrbanDictionary;
 
 # ABSTRACT: An OO interface to UrbanDictionary.com's JSON API.
 
-our $VERSION = "2.013";
+our $VERSION = "2.014";
 
 use Carp;
 use strict;
@@ -37,7 +37,7 @@ WebService::UrbanDictionary - An OO interface to UrbanDictionary.com's JSON API.
 
 =head1 VERSION
 
-version 2.013
+version 2.014
 
 =head1 SYNOPSIS
 
